@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Activity2</title>
+  </head>
+
+  <body onload="main()">
+    <div style="display: inline-block; vertical-align:top;">
+    <canvas id="webgl" width="800" height="600">
+    Please use a browser that supports "canvas"
+    </canvas>
+    </div>
+    <div style="display: inline-block; width: 30%;">
+    <p>p key: pause/start</p>
+    <p>r key: drag spring; R key: reinitialize</p>
+    <h3>Move Camera:</h3>
+    <p>&#8593; look up, &#8595; look down, &#8592; look left, &#8594; look right.</p>
+    <p><b>i key:</b> move forward, <b>k key:</b> move backward, <b>j key:</b> move left, <b>l key:</b> move right</p>
+
+    <p>Change Interactive Rate</p>
+      <button type="button" onclick="increase_rate()">Increase Rate</button>
+      <button type="button" onclick="decrease_rate()">Decrease Rate</button>
+
+    <p>Quick View Change:</p>
+    <button type="button" onclick="LookAtVBO2()">Cloth</button>
+    <button type="button" onclick="LookAtVBO4()">Fire</button>
+    <button type="button" onclick="LookAtVBO5()">Boid</button>
+    <button type="button" onclick="LookAtVBO3()">Firework</button>
+    <p>Click upper half of screen to make bigger fire, and vice versa.</p>
+    <p>b key: add wind to fire and cloth.</p>
+      <button type="button" onclick="Wind_changeDir(4)">Change wind dir on fire.</button>
+      <button type="button" onclick="Wind_changeDir(2)">Change wind dir on cloth.</button>
+
+    <button type="button" onclick="line = !line">Switch Net/Cloth</button>
+    
+    </div>
+
+    <p>
+      Flying Mode (key 4 to turn on/off) : <span id="flyingMode">OFF</span></br>
+      <button type="button" onclick="VBO1toggle()">VBO-1 hide/show</button>
+      <button type="button" onclick="VBO2toggle()">VBO-2 hide/show</button>
+      <button type="button" onclick="VBO3toggle()">VBO-3 hide/show</button>
+      <button type="button" onclick="VBO4toggle()">VBO-4 hide/show</button>
+      <button type="button" onclick="VBO5toggle()">VBO-5 hide/show</button>
+    </p>
+    <p>
+      Change Solver : <span id="Solver">MidPoint</span></br>
+      <button type="button" onclick="solverSel = 0; document.getElementById('Solver').innerHTML = 'Euler';">Euler</button>
+      <button type="button" onclick="solverSel = 1; document.getElementById('Solver').innerHTML = 'MidPoint';">MidPoint</button>
+      <button type="button" onclick="solverSel = 4; document.getElementById('Solver').innerHTML = 'Adams-Bashforth';">Adams-Bashforth</button>
+      <button type="button" onclick="solverSel = 5; document.getElementById('Solver').innerHTML = 'Verlet';">Verlet</button>
+      <button type="button" onclick="solverSel = 6; document.getElementById('Solver').innerHTML = 'Velocity Verlet';">Velocity Verlet</button>
+    </p>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+		<script src="lib/glmatrix.js"></script>
+		<script src="VBOboxes.js"></script>
+
+    <script src="VBObox3.js"></script>
+    <script src="VBObox4.js"></script>
+    <script src="VBObox5.js"></script>
+    <script src="TwoVBOs.js"></script>
+  </body>
+</html>
