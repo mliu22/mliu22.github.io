@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Premier League Football Predictor</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" type="text/css" href="container.css">
+    <link rel="stylesheet" type="text/css" href="themes.css" />
+    <script type="text/javascript" src="js/colorpicker.js"></script>
+    <script type="text/javascript" src="js/shop_businessCard.js"></script>
+</head>
+
+<body onload="main();">
+	<nav>
+		<div id="site-Title">
+			Design Your Card
+		</div>
+		<div id="nav-link">
+			<a href="index.html">主页</a> 
+			<a href="shop.html">商铺</a> 
+			<a href="#">About Us</a> 
+			<a href="#">Contact Us</a>
+			<img src="images/shoppingbag.png" alt="Smiley face"><span id="bagAmount">0</span>
+		</div>
+	</nav>
+
+	<div class="content-container design-page">
+		<h2>设计你的商业名片</h2>
+		<div class="design-window">
+			<canvas id="myCanvas" style="width: 100%; height:100%; border:1px solid #8C8C8C;">
+				<img src="images/shoppingbag.png" alt="Smiley face">
+			</canvas>
+			<canvas id="myCanvas2" style="width: 100%; height:100%; border:1px solid #8C8C8C; display: none;"></canvas>
+			<div class="chooseSide">
+				<div class="Side" onclick="businessCardFrontSide();">
+					<img src="images/bgimg2.png" style="width:100%;">
+					<div class="middle">正面</div>
+				</div>
+				
+				<div class="Side" onclick="businessCardBackSide();">
+					<img src="images/bgimg2.png" style="width:100%;">
+					<div class="middle">反面</div>
+				</div>
+				
+			</div>
+			<div class="template-carousel">
+				模版<br>
+				<div class="templates">
+					<img src="images/bgimg2.png">
+					<img src="images/bgimg2.png">
+					<img src="images/bgimg2.png">
+					<img src="images/bgimg2.png">
+					<img src="images/bgimg2.png">
+					<img src="images/bgimg2.png">
+					<img src="images/bgimg2.png">
+					<img src="images/bgimg2.png">
+					
+					<img src="images/bgimg2.png">
+				</div>
+		
+			</div>
+		</div>
+		<div class="design-option">
+			<div id="size">
+				尺寸<br>
+				<img src="images/businesscarddimension.png" style="width:25%;">
+				<img src="images/businesscarddimension.png" style="width:25%; transform:rotate(-90deg);">	
+			</div>
+			
+			<hr class="style6">
+			<div id="bgColor">
+				背景<br>
+				<div id="colorSample" onclick="pickColor();">
+					
+				</div>
+				<div id="backgroundColorPicker" style="display: none;" class="colorpicker">
+					<div class="closeButton"><img src="images/close.png" onclick="closeColorPicker();"></div>
+					<div id="color-picker" class="cp-default"></div>
+				</div>
+				<br><br>
+				上传背景图片：	<form>
+  								<input type="file" name="pic" accept="image/*" value="选择图片">
+  								<input type="submit" value="使用图片">
+							</form>
+			</div>
+			<hr class="style6">
+
+			<div id="material">
+				材质
+			</div>
+			<hr class="style6">
+			
+			
+		</div>
+
+		
+
+		
+	</div>
+
+	
+
+	<div class="subscribe">
+		Subscribe and stay on top of our latest news and promotions.
+		<form>
+		<input type="text" placeholder="电话号码" name="subscribe_number">
+		<input type="submit" value="订阅">
+		</form>
+		<img src="images/weixin.png" alt="weixin icon">
+		<img src="images/weibo.png" alt="weibo icon">
+		<img src="images/weibo.png" alt="weibo icon">
+	</div>
+
+	
+
+	<footer>
+	<img src="images/copyright.png" alt="copyright icon">
+	2017 by Design Your Card
+	</footer>
+
+
+	<script type="text/javascript">
+
+      ColorPicker(
+
+        document.getElementById('color-picker'),
+
+        function(hex, hsv, rgb) {
+          console.log(hsv.h, hsv.s, hsv.v);         // [0-359], [0-1], [0-1]
+          console.log(rgb.r, rgb.g, rgb.b);         // [0-255], [0-255], [0-255]
+          document.getElementById("colorSample").style.backgroundColor = hex;
+          // document.body.style.backgroundColor = hex;        // #HEX
+        });
+
+    </script>
+
+</body>
+</html>

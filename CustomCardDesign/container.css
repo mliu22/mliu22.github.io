@@ -1,0 +1,988 @@
+body{
+	overflow-x: scroll;
+}
+nav {
+	
+	margin-bottom: 1%;
+	background: #F1FFFF;
+	height:60px;
+	line-height: 60px;
+}
+
+nav a{
+	text-decoration: none;
+	margin:auto 10px;
+	font-size:1.1em;
+	color:black;
+	-webkit-transition: color 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: color 0.5s;
+}
+
+nav a:hover{
+	color:#FFC386;
+}
+
+nav img{
+	margin-left: 3%;
+	vertical-align: -10%;
+	width:7%;
+}
+
+nav #nav-link{
+	display: inline-block;
+	margin-left: 35%;
+}
+
+nav #nav-link #bagAmount{
+	position:relative;
+	margin-left: -4.2%;
+}
+
+nav #site-Title{
+	display: inline-block;
+	text-align: left;
+	margin-left: 5%;
+	color:black;
+	font-size: 2em;
+}
+
+nav[class=design_nav_bar]{
+	margin-top: -16px;
+	background: #C4FFF2;
+	background: -webkit-linear-gradient(#C4FFF2, #E6FFFA); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#C4FFF2, #E6FFFA); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#C4FFF2, #E6FFFA); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#C4FFF2, #E6FFFA);  /*Standard syntax*/
+	height:50px;
+	text-align: left;
+	padding-right: 5%;
+	line-height: 47px;
+	padding-left: -10px; 
+	
+}
+
+nav ul{
+	margin-left: -40px;
+}
+
+nav li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 1px 30px;
+}
+
+nav li[class=selected]{
+	border:1px solid black;
+}
+
+nav li:hover{
+	border:1px solid black;
+}
+
+.sidenav {
+    width: 15%;
+    height:100%;
+    position: absolute;
+    margin-left: 5%;
+    background-color: #F1FFee;
+    overflow-x: hidden;
+    transition: 0.5s;
+    
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 25%;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #818181;
+    display: block;
+    transition: 0.8s;
+}
+
+.sidenav a:hover{
+    background: grey;
+    color:black;
+
+}
+
+.sidenav h2{
+    padding-left: 15%;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav img{
+	margin-right: 7%;
+	vertical-align: middle;
+    width:20%;
+}
+
+.content-container{
+	overflow-x: scroll;
+}
+
+.content-container .landing-content{
+	margin: 1em 0;
+	height:550px;
+	width:100%;
+	background: #B7FFF1;
+}
+
+.content-container .landing-content img{
+	display: inline-block;
+	width:50%;
+	height:100%;
+
+
+}
+
+.content-container .landing-content #img-right{
+	display: inline-block;
+	
+	width:25%;
+	margin-left: 6%;
+	margin-top: 7%;
+	vertical-align: top;
+	text-transform: uppercase;
+	font-size: 6em;
+
+	-webkit-transform:scale(0.8,1); /* Safari and Chrome 
+    -moz-transform:scale(0.8,1); /* Firefox */
+    -ms-transform:scale(0.8,1); /* IE 9 */
+    -o-transform:scale(0.8,1); /* Opera */
+    transform:scale(0.8,1); /* W3C */
+
+	
+}
+
+.content-container .landing-content button{
+	background:#FFC386;
+	border: 0;
+ 	box-shadow:none;
+ 	border-radius: 0px;
+ 	width:40%;
+ 	height:auto;
+ 	font-size: 0.2em;
+ 	padding: 10px;
+ 	outline: none;
+ 	-webkit-transition: background 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: background 0.5s;
+}
+
+.content-container .landing-content button:hover{
+	background:#FFEECC;
+	
+}
+
+
+.content-container .content-discountInfo{
+	margin: 0 auto;
+	width: 80%;
+	margin-top: 8%;
+}
+
+.content-container .content-discountInfo #discountInfo-left{
+	width: 30%;
+	margin-left: 5%;
+	display: inline-block;
+	text-align: center;
+	padding: 6% 5%; 
+	background-image: url("images/bgimg2.png");
+	font-size: 2em;
+
+}
+
+.content-container .content-discountInfo #discountInfo-right{
+	width: 30%;
+	margin-left: 10%;
+	margin-right: 0px;
+	display: inline-block;
+	text-align: center;
+	padding: 6% 5%; 
+	background-image: url("images/bgimg2.png");
+	font-size: 2em;
+}
+
+.content-container .content-discountInfo .discountInfo-content{
+	background: white;
+	margin: 0 auto;
+	width:100%;
+	padding: 30% 1%;
+
+}
+
+.content-container .content-discountInfo #discountInfo-left button{
+	width: 40%;
+	padding: 3%;
+	margin-top: 8%;
+	border: 0;
+ 	box-shadow:none;
+ 	border-radius: 0px;
+ 	background: #B7FFF1;
+ 	font-size: 0.4em;
+}
+
+.content-container .content-discountInfo #discountInfo-right button{
+	width: 40%;
+	padding: 3%;
+	margin-top: 8%;
+	border: 0;
+ 	box-shadow:none;
+ 	border-radius: 0px;
+ 	background: #B7FFe1;
+ 	font-size: 0.4em;
+}
+
+.content-container .content-gallery{
+	margin-top: 10%;
+	text-align: center;
+}
+
+.content-container .content-gallery h2{
+	font-size: 2em;
+}
+
+.content-container .content-gallery .overlay{
+	display: inline-block;
+	width:12%;
+	background-color: white;
+}
+
+.content-container .content-gallery img{
+	width:100%;
+	-webkit-transition: opacity 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: opacity 0.5s;
+}
+
+.content-container .content-gallery img:hover{
+	opacity: 0.5;
+}
+
+.content-container .productType{
+	display: inline-block;
+	padding:5%;
+	width: 35%;
+	height:250px;
+	background: white;
+}
+
+.content-container .productType:hover{
+	display: inline-block;
+	padding:5%;
+	width: 35%;
+	height:250px;
+	background: white;
+}
+
+.content-container .productType img{
+	width: 100%;
+	height: 100%;
+	-webkit-transition: opacity 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: opacity 0.5s;
+}
+
+.content-container .productType:hover img{
+	opacity: 0.3;
+}
+
+
+.content-container .productType .middle {
+  transition: .5s ease;
+  opacity: 0;
+  width: 30%;
+  text-align: center;
+  position: relative;
+  top: -50%;
+  left: 50%;
+  margin-bottom: -15%;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+
+.content-container .productType:hover .middle {
+  opacity: 1;
+}
+
+.content-container .productType .text{
+	margin-top: 3%;
+	text-align: center;
+}
+
+.partial-container{
+	margin-left: 22%;
+
+}
+
+.design-page{
+	width: 90%;
+	margin:0 auto;
+	
+	padding-bottom: 5%;
+
+}
+
+.design-page h2{
+	padding-top: 2%;
+	margin-left: 5%;
+}
+
+.content-container .design-window{
+	width: 680px;
+	height: 700px;
+	display: inline-block;
+	margin-left:3%;
+}
+
+.workZone{
+	width: 680px;
+	height:420px;
+	border: 1px solid gray;
+	text-align: center;
+	padding: 5%;
+	overflow:hidden;
+	position:relative;
+	box-sizing: border-box;
+
+}
+
+.workZone img{
+	/*margin:0 auto;*/
+	width:600px; 
+	height:351px;
+	position: absolute;
+	left:40px;
+	top:35px;
+	box-shadow: 7px 7px 5px grey;
+	-khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.workZone .plainColor{
+	width:600px; 
+	height:351px;
+	position: absolute;
+	left:40px;
+	top:35px;
+	background-color: red;
+	display: none;
+}
+
+.workZone area{
+	z-index: -10;
+
+}
+
+.workZone .businessCardTextBox{
+	/*border: 1px solid white;*/
+	width:500px;
+	padding: 10px 10px;
+	color: white;
+	position: absolute;
+	z-index: 1000;
+	/*overflow-x: scroll;*/
+	word-wrap: break-word; 				/*if overflow go next line*/
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently*/
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+.workZone .businessCardTextBox:hover{
+	border: 1px dashed white;
+	border-width: 2px;
+	box-sizing: border-box;
+
+}
+
+.workZone .selected{
+	border: 4px dashed green;
+	border-width: 2px;
+}
+
+.workZone .selected:hover{
+	border: 4px dashed green;
+	border-width: 2px;
+}
+
+.BIU .selected{
+	background: gray;
+}
+
+.alignment .selected{
+	background: gray;
+}
+
+.content-container .design-option{
+	
+	width: 400px;
+	padding-left: 10px;
+	display: inline-block;
+	vertical-align: top;
+	/*background: green;*/
+
+}
+
+.content-container .design-option .designTabs{
+	display: none;
+	height: 500px;
+	border: 1px solid gray;
+	padding: 3px 20px;
+	overflow-y: scroll;
+}
+
+.content-container .design-option .designTabs[id=tab1]{
+	padding-top:3%; 
+	text-align: center;
+}
+
+.content-container .design-option .designTabs[id=tab1] button{
+	width: 100%;
+	padding: 8px;
+	border-radius: 5px;
+	outline: none;
+	font-size: 0.9em;
+	box-shadow:none;
+	border: 0;
+}
+
+.content-container .design-option .designTabs[id=tab1] button:active{
+	box-shadow: inset 2px 3px 4px gray;
+	color:blue;
+}
+
+.content-container .design-option .designTabs .TextBoxButtons{
+	background: red;
+	width:80px;
+	height:39px;
+	padding: 0px;
+	text-align: left;
+	clear:both;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+
+	margin-left: 280px;
+	margin-top: -39px;
+}
+
+.content-container .design-option .designTabs button.editTextBox{
+	width: 50%;
+	height:100%;
+	display: inline-block;
+	border: 1px solid gray;
+	border-radius: 0px;
+}
+
+.content-container .design-option .designTabs button.deleteTextBox{
+	width: 50%;
+	height:100%;
+	display: inline-block;
+	border-radius: 0px;
+	margin-left: -5%;
+	border: 1px solid gray;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+
+}
+
+.content-container .design-option .designTabs input{
+	margin-top: 5%;
+	width: 100%;
+	font-size: 0.9em;
+	padding: 10px;
+	padding-right: 0;
+	border-radius: 5px;
+	outline: none;
+	box-shadow:none;
+	border: 1px solid gray;
+	box-sizing: border-box;
+}
+
+.content-container .design-option .designTabs .editTextBoxOptions{
+	margin-top: 5px;
+	width: 100%;
+	height:150px;
+	display: none;
+	border: 1px solid gray;
+	text-align: left;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	box-sizing: border-box;
+	/*border-radius: 10px;*/
+}
+
+select.fontFamily{
+	/*margin-left:50px; */
+	margin-left: 20px; 
+	margin-top: 10px;
+	width:50%;
+	height:22px;
+}
+
+.content-container .design-option .designTabs .editTextBoxOptions input[type=number]{
+	height:23px;
+	width: 62px;
+	font-size: 0.9em;
+	margin-right: 3px;
+	margin-top: 7px;
+	margin-left: -6px;
+}
+
+.fontSizeSuffix{
+	display: inline-block;
+}
+
+.content-container .design-option .designTabs .editTextBoxOptions .BIU{
+	vertical-align: top;
+	margin-top: 8px;
+	margin-right: 20px;
+	margin-left: 58px;
+	position: relative;
+	background: red;
+	width:170px;
+	height: 22px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+
+.content-container .design-option .designTabs .editTextBoxOptions .BIU .bold{
+	padding: 2px;
+	width:56.6px;
+	height: 100%;
+	border-radius: 0px;
+	border:0.01em  solid black;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.content-container .design-option .designTabs .editTextBoxOptions .BIU .italic{
+	padding: 2px;
+	border-radius: 0px;
+	margin-left: -4px;
+	width:56.6px;
+	height: 100%;
+	border: 0.05em solid black;
+}
+
+.content-container .design-option .designTabs .editTextBoxOptions .BIU .underline{
+	padding: 2px;
+	border-radius: 0px;
+	margin-left: -4px;
+	width:56.6px;
+	height: 100%;
+	border:0.05em  solid black;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.content-container .design-option .designTabs .editTextBoxOptions .alignment{
+	vertical-align: top;
+	/*margin-top: 8px;*/
+	margin-right: 20px;
+	position: relative;
+	background: red;
+	width:170px;
+	height: 22px;
+	border-radius: 5px;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 20px;
+
+}
+
+
+.content-container .design-option .designTabs .editTextBoxOptions .alignment .left_align{
+	padding: 0px;
+	width: 56.6px;
+	height: 100%;
+	border-radius: 0px;
+	border:1px solid black;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.content-container .design-option .designTabs .editTextBoxOptions .alignment .center_align{
+	padding: 0px;
+	border-radius: 0px;
+	margin-left: -4px;
+	width:56.6px;
+	height: 100%;
+	border:1px solid black;
+}
+
+.content-container .design-option .designTabs .editTextBoxOptions .alignment .right_align{
+	padding: 0px;
+	border-radius: 0px;
+	margin-left: -4px;
+	width:56.6px;
+	height: 100%;
+	border:1px solid black;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.content-container .design-option .designTabs .editTextBoxOptions .fontColor{
+	width:76px;
+	height:20px;
+	background:white;
+	border:1px solid gray;
+	border-radius: 5px;
+	display: inline-block;
+	margin-left: 15px;
+	margin-top: 10px;
+	vertical-align: top;
+	position: relative;
+}
+
+.content-container .design-option .designTabs .editTextBoxOptions .fontColor .fontColorPicker{
+	position: absolute;
+	width: 35%;
+	height: 22px;
+	left:50px;
+	top:-1px;
+	border-radius: 0px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 1px;
+}
+
+.content-container .design-option .designTabs .editTextBoxOptions .fontColor .dropdownArrow{
+	width: 65%;
+	height: 22px;
+	top: -1px;
+	left: 0px;
+	position: absolute;
+	/*display: none;*/
+	border-radius: 0px;
+	/*background: red;*/
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.content-container .design-option .designTabs .editTextBoxOptions .fontColor .dropdownArrow img{
+	width: 32%;
+	top: 3px;
+	left: 33px;
+	position: absolute;
+	display: none;
+	border-radius: 7px;
+	background: lightgray;
+}
+
+.content-container .design-option .designTabs .editTextBoxOptions .fontColor:hover .dropdownArrow img{
+	opacity: 1;
+	display: block;
+}
+
+
+.content-container .design-option img:hover{
+	opacity: 0.5;
+	-webkit-transition: opacity 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: opacity 0.5s;
+}
+
+.content-container .design-option input[type=submit]{
+	width:20%;
+	padding:4px 5px;
+}
+
+.content-container .design-option input[type=file]{
+
+}
+
+.content-container .design-option #colorSample{
+	width:80px; 
+	height:20px; 
+	background: red; 
+	border: 2px solid gray; 
+	border-radius: 5px;
+	margin-top:3%; 
+	display: inline-block;
+	position: relative;
+}
+
+.content-container .design-option #colorSample:hover #backgroundColorPicker{
+	display: inline-block; 
+	vertical-align:top; 
+	margin-left:5%;
+}
+
+.content-container .design-option #colorSample button{
+	position: absolute; 
+	width:35%; 
+	height: 24px; 
+	padding: 1px; 
+	top:-2px; 
+	left:54px; 
+	border-top-right-radius: 5px; 
+	border-bottom-right-radius: 5px;
+	outline: none;
+	box-shadow:none;
+	border: none;
+}
+
+.content-container .design-option #colorSample .fixedColorPicker4BG{
+	/*background: green;*/
+	width: 70%;
+	height:22px;
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+
+}
+
+.content-container .design-option #colorSample .fixedColorPicker4BG img{
+	background: lightgray;
+	width: 32%;
+	height:18px;
+	position: absolute;
+	top: 2px;
+	left: 35px;
+	border-radius: 7px;
+	display: none;
+}
+.content-container .design-option #colorSample .fixedColorPicker4BG:hover img{
+	display: block;
+	opacity: 1;
+}
+
+
+.content-container .design-option #bgImgChoice{
+	margin-top: 10px;
+	width: 100%;
+	height: 200px;
+	/*background: red;*/
+	padding-left: 10px;
+	padding-top: 10px;
+	box-sizing: border-box;
+	overflow-y: scroll;
+	border:1px solid gray;
+}
+
+.content-container .design-option #bgImgChoice img{
+	border: 1px solid gray;
+	width:107px;
+	height: 62px;
+	margin-bottom: 5px;
+	margin-right: 3px;
+	box-shadow: 3px 3px 5px grey;
+	box-sizing: border-box;
+}
+
+
+.content-container .template-carousel{
+	width: 100%;
+	overflow-x:scroll;
+}
+.content-container .template-carousel .templates{
+	width:150%;
+}
+
+.content-container .template-carousel img{
+	width: 10%;
+	margin-right: 0.5%;
+	-webkit-transition: opacity 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: opacity 0.5s;
+}
+
+.content-container .template-carousel img:hover{
+	opacity: 0.5;
+}
+
+.content-container .chooseSide{
+	margin-top: 2%;
+	width: 100%;
+	overflow-x:scroll;
+}
+
+.colorpicker{
+	/*width:260px;
+	height: 600px;
+	position: absolute;*/
+	padding: 4px;
+	padding-left: 12px;
+	margin-top: 3%;
+	display: none;
+	width:260px; 
+	height:250px;
+	position: absolute;
+	left:820px;
+	top:255px;
+	background: lightgray;
+	z-index: 10000;
+
+	border-radius: 10px;
+}
+
+.fixedColorPicker{
+	width:320px; 
+	height:145px;
+	position: absolute;
+	left:620px;
+	top:255px;
+	background: white;
+	border: 1px solid gray;
+	border-radius: 7px;
+	padding: 5px;
+	box-sizing: border-box;
+
+	display: none;
+
+
+}
+.fixedColorPicker button{
+	width: 48px;
+	height:25px;
+	border:none;
+	margin-bottom: 2px;
+	outline: none;
+	box-sizing: border-box;
+}
+
+.fixedColorPicker button:hover{
+	/*border: 2px solid gray;
+	box-sizing: border-box;*/
+}
+
+.fixedColorPicker button.selected{
+	border: 2px solid gray;
+	box-sizing: border-box;
+}
+
+
+
+.closeButton{
+	width: 98%;
+	/*background: lightgray;*/
+}
+
+.closeButton img{
+	width:8%;
+	margin-bottom: 5px;
+}
+
+.middle{
+	background-color: white;
+	position: relative;
+	width: 60%;
+	top: -65px;
+	left:12%;
+	padding: 10px;
+	text-align: center;
+	margin-bottom: -50px;
+}
+
+.Side{
+	width: 20%;
+	background-color: green;
+	margin-right: 5%;
+	display: inline-block;
+	-webkit-transition: opacity 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: opacity 0.5s;
+}
+
+.Side:hover{
+	opacity: 0.7;
+}
+
+hr.style11 {
+	height: 6px;
+	width:30%;
+	margin-bottom: -3%;
+	background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+    border: 0;
+}
+
+hr.style3 {
+	border-top: 1px dashed #8c8b8b;
+}
+
+hr.style6 {
+	background-color: #fff;
+	border-top: 2px dotted #8c8b8b;
+}
+
+
+
+
+
+
+
+
+.subscribe{
+	margin-top: 10%;
+	text-align: center;
+}
+
+.subscribe form{
+	margin-top: 1%;
+}
+
+.subscribe img{
+	margin-top: 1%;
+	margin-right: 1%;
+	width:3%;
+	-webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.5s;
+}
+
+.subscribe img:hover{
+	width:3.5%;
+}
+
+.subscribe input[type=text] {
+    width: 25%;
+    padding: 12px 20px;
+    outline: none;
+
+}
+
+.subscribe input[type=submit] {
+    width: 8%;
+    background-color: #B7FFF1;
+    padding: 14px 20px;
+    border: 0;
+ 	box-shadow:none;
+ 	border-radius: 0px;
+ 	outline: none;
+ 	font-size: 0.8em;
+}
+
+footer{
+	margin-top: 2%;
+	font-size: 0.9em;
+	text-align: center;
+}
+
+footer img{
+	vertical-align: middle;
+	width: 1%;
+	
+}
+
+
+
+
+
+
+
