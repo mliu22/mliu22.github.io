@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="themes.css" />
     <script type="text/javascript" src="js/colorpicker.js"></script>
     <script type="text/javascript" src="js/shop_businessCard.js"></script>
+
 </head>
 
 <body onload="main();">
@@ -35,32 +36,92 @@
 		<h2>设计你的商业名片</h2>
 		<button onclick="convertIMG();">convertIMG</button>
 		<br>
+		<div id="TexBoxEditor" style="top:30px;">
+			<!-- <hr class="style6"> -->
+						<!-- Font: -->
+			<select class="fontFamily">
+				<option value="volvo">Volvo</option>
+				<option value="saab">Saab</option>
+				<option value="mercedes">Mercedes</option>
+				<option value="audi">Audi</option>
+			</select>
+			<div class="fontColor" id="fontColorSample">
+				<div class="dropdownArrow" onclick="fixedPickColorSection(1);">
+					<img src="images/dropdownArrow.png" alt="dropdownArrow"/>
+				</div>
+							
+				<button class="fontColorPicker" onclick="pickColor(1);">
+					<img src="images/colorCircle.png" alt="colorCircle" style="width: 80%;" />
+				</button>
+			</div>
+
+			<div class="BIU">
+				<button class="bold" id="bold" onclick="BoldButton()"><img src="images/bold.png" alt="bold" style="width:30%;" /></button>
+				<button class="italic" id="italic" onclick="ItalicButton()"><img src="images/italic.png" alt="bold" style="width:30%;" /></button>
+				<button class="underline" id="underline" onclick="UnderlineButton()"><img src="images/underline.png" alt="bold" style="width:30%;"/></button>
+			</div>
+			<span class="fontSizeSuffix"><input type="number" name="BusinessFont" value="10" min="1" max="16" oninput="editFontSize()" />pt</span>
+						
+			<!-- <hr class="style6"> -->
+			<!-- Alignment: -->
+			<div class="alignment">
+				<button class="left_align" id="left_align" onclick="leftAlignButton()"><img src="images/align_left.png" alt="bold" style="width:40%;" /></button>
+				<button class="center_align selected" id="center_align" onclick="centerAlignButton()"><img src="images/align_center.png" alt="bold" style="width:40%;" /></button>
+				<button class="right_align" id="right_align" onclick="rightAlignButton()"><img src="images/align_right.png" alt="bold" style="width:40%;"/></button>
+			</div>
+			<!-- <hr class="style6"> -->
+
+		</div>
 		<div class="design-window">
-			<div class="workZone">
+			<div class="workZone" onclick="deselectTextBox();" id="frontSide">
 				<div id="textBoxes">
-					<div class="businessCardTextBox" id="workZoneTextBox1" style="top:55px; left:90px; text-transform: uppercase; font-size: 100px;" onclick="selectTextBox(1);">Name</div>
-					<div class="businessCardTextBox" id="workZoneTextBox2" style="top:180px; left:90px; text-transform: uppercase; font-size: 15px;" onclick="selectTextBox(2);">Job Title</div>
-					<div class="businessCardTextBox" id="workZoneTextBox3" style="top:220px; left:90px; text-transform: uppercase; font-size: 15px;" onclick="selectTextBox(3);">Company Name</div>
-					<div class="businessCardTextBox" id="workZoneTextBox4" style="top:250px; left:90px; text-transform: uppercase; font-size: 15px;" onclick="selectTextBox(4);">Phone Number</div>
+					<div class="businessCardTextBox" id="workZoneTextBox1" style="top:55px; left:90px; text-transform: uppercase; font-size: 100px; text-align: center;" onclick="selectTextBox(1,11);">Name</div>
+					<div class="businessCardTextBox" id="workZoneTextBox2" style="top:180px; left:90px; text-transform: uppercase; font-size: 15px; text-align: center;" onclick="selectTextBox(2,11);">Job Title</div>
+					<div class="businessCardTextBox" id="workZoneTextBox3" style="top:220px; left:90px; text-transform: uppercase; font-size: 15px; text-align: center;" onclick="selectTextBox(3,11);">Company Name</div>
+					<div class="businessCardTextBox" id="workZoneTextBox4" style="top:250px; left:90px; text-transform: uppercase; font-size: 15px; text-align: center;" onclick="selectTextBox(4,11);">Phone Number</div>
 				</div>
 				
-				<img src="businessCardBG/img1.png" id="businessCardBGImg" usemap="#businessCardWorkWindow">
+				<img class="BG" src="businessCardBG/img1.png" id="businessCardBGImg" usemap="#businessCardWorkWindow">
+				
+				<!-- <hr class="verticalDivider"> -->
+				
 				<div class="plainColor" id="plainColorID"></div>
+				<div class="saveBorder"></div>
 				<map name="businessCardWorkWindow">
 				  <area shape="rect" coords="0,110,82,200" alt="text1" onclick="console.log('haha');">
 
 				</map>
 			</div>
+
+			<div class="vertical-line" id="verticalDivider" ></div>
+			<div class="horizontal-line" id="horizontalDivider"></div>
+
+			<div class="workZone" id="backSide" onclick="deselectBackTextBox();" style="display: none;">
+				<div id="logo1" class="logo" style="top:70px; left:80px;" onclick="selectTextBox(1,22);" >
+					<img class="logoImg" src="images/logo.png"/>
+				</div>
+				<div id="textBoxesBack">
+					<div class="businessCardTextBox" id="workZoneTextBackBox1" style="top:205px; left:80px; text-transform: uppercase; font-size: 20px; text-align: center; color:rgb(11,11,56);" onclick="selectTextBox(1,21);">Name</div>
+				</div>
+				
+				<img class="BG" src="businessCardBG/img1.png" id="businessCardBGImg" usemap="#businessCardWorkWindow">
+				
+				<!-- <hr class="verticalDivider"> -->
+				<!-- <div class="vertical-line" id="verticalDivider"></div>
+				<div class="horizontal-line" id="horizontalDivider"></div> -->
+				<div class="plainColor" id="plainColorID" style="display: block; background: #F2F2F2;"></div>
+				<div class="saveBorder"></div>
+			</div>
 			
 			<div class="chooseSide">
 				<div class="Side" onclick="businessCardFrontSide();">
 					<img src="images/bgimg2.png" style="width:100%;">
-					<div class="middle">正面</div>
+					<div id="frontSideButton" class="middle">正面</div>
 				</div>
 				
 				<div class="Side" onclick="businessCardBackSide();">
 					<img src="images/bgimg2.png" style="width:100%;">
-					<div class="middle">反面</div>
+					<div id="backSideButton" class="middle">反面</div>
 				</div>
 				
 			</div>
@@ -81,6 +142,8 @@
 		
 			</div>
 		</div>
+
+		
 		<div class="design-option">
 			<nav class="design_nav_bar">
 				<ul>
@@ -91,171 +154,53 @@
 			</nav>
 
 			<div id="tab1" class="designTabs" style="display: block;">
-				<button onclick="addTextField();">New Text Box</button>
-				<!-- textbox1 -->
-				<input type="text" name="text1" placeholder="Name" onfocus="selectTextBox(1);" oninput="updateTextBox();">
-				<div class="TextBoxButtons">
-					<button class="editTextBox" onclick="selectTextBox(1); enableEdit();"><img src="images/editPencil.png" alt="editPencil" style="width: 70%;"></button>
-					<button class="deleteTextBox">&#9747;</button>
-				</div>
-				<div class="editTextBoxOptions" id="editSection1" style="display: block;">
-					<hr class="style6">
-					Font:
-					<select class="fontFamily">
-					  <option value="volvo">Volvo</option>
-					  <option value="saab">Saab</option>
-					  <option value="mercedes">Mercedes</option>
-					  <option value="audi">Audi</option>
-					</select>
-					<div class="fontColor" id="fontColorSample1">
-						<div class="dropdownArrow" onclick="fixedPickColorSection();">
-							<img src="images/dropdownArrow.png" alt="dropdownArrow"/>
+				<div id="FrontSideEditor">
+					<button onclick="addTextField(1);">New Text Box</button>
+					<!-- textbox1 -->
+					<div id="textInput1">
+						<input type="text" name="text1" placeholder="Name" onfocus="selectTextBox(1,11);" oninput="updateTextBox(1);">
+						<div class="TextBoxButtons">
+							<!-- <button class="editTextBox" onclick="selectTextBox(1); enableEdit();"><img src="images/editPencil.png" alt="editPencil" style="width: 70%;"></button> -->
+							<button class="deleteTextBox" onclick="deleteTextBox(1,1);">&#9747;</button>
 						</div>
-						
-						<button class="fontColorPicker" onclick="pickColor(1);">
-							<img src="images/colorCircle.png" alt="colorCircle" style="width: 80%;" />
-						</button>
 					</div>
-					<br>
-					<div class="BIU">
-						<button class="bold" id="bold1" onclick="BoldButton()"><img src="images/bold.png" alt="bold" style="width:30%;" /></button>
-						<button class="italic" id="italic1" onclick="ItalicButton()"><img src="images/italic.png" alt="bold" style="width:30%;" /></button>
-						<button class="underline" id="underline1" onclick="UnderlineButton()"><img src="images/underline.png" alt="bold" style="width:30%;"/></button>
+					<!-- textbox2 -->
+					<div id="textInput2">
+						<input type="text" name="text2" placeholder="Job Title" onfocus="selectTextBox(2,11);" oninput="updateTextBox(1);">
+						<div class="TextBoxButtons">
+							<!-- <button class="editTextBox" onclick="selectTextBox(2); enableEdit();"><img src="images/editPencil.png" alt="editPencil" style="width: 70%;"></button> -->
+							<button class="deleteTextBox" onclick="deleteTextBox(2,1);">&#9747;</button>
+						</div>
 					</div>
-					<span class="fontSizeSuffix"><input type="number" name="BusinessFont1" value="10" min="1" max="16" oninput="editFontSize()" />pt</span>
+					<!-- textbox3 -->
+					<div id="textInput3">
+						<input type="text" name="text3" placeholder="Company Name" onfocus="selectTextBox(3,11);" oninput="updateTextBox(1);">
+						<div class="TextBoxButtons">
+							<!-- <button class="editTextBox" onclick="selectTextBox(3); enableEdit();"><img src="images/editPencil.png" alt="editPencil" style="width: 70%;"></button> -->
+							<button class="deleteTextBox" onclick="deleteTextBox(3,1);">&#9747;</button>
+						</div>
+					</div>
+					<!-- textbox4 -->
+					<div id="textInput4">
+						<input type="text" name="text4" placeholder="Phone Number" onfocus="selectTextBox(4,11);" oninput="updateTextBox(1);">
+						<div class="TextBoxButtons">
+							<!-- <button class="editTextBox" onclick="selectTextBox(4); enableEdit();"><img src="images/editPencil.png" alt="editPencil" style="width: 70%;"></button> -->
+							<button class="deleteTextBox" onclick="deleteTextBox(4,1);">&#9747;</button>
+						</div>
+					</div>
 					
-					<hr class="style6">
-					Alignment:
-					<div class="alignment">
-						<button class="left_align" id="left_align1" onclick="leftAlignButton()"><img src="images/align_left.png" alt="bold" style="width:40%;" /></button>
-						<button class="center_align selected" id="center_align1" onclick="centerAlignButton()"><img src="images/align_center.png" alt="bold" style="width:40%;" /></button>
-						<button class="right_align" id="right_align1" onclick="rightAlignButton()"><img src="images/align_right.png" alt="bold" style="width:40%;"/></button>
-					</div>
-					<hr class="style6">
 				</div>
+				<div id="backSideEditor" style="display: none;">
+					<button onclick="addTextField(2);">New Text Box</button>
+					<div id="textInputBack1">
+						<input type="text" name="text4" placeholder="Phone Number" onfocus="selectTextBox(1,2);" oninput="updateTextBox(2);">
+						<div class="TextBoxButtons">
+							<!-- <button class="editTextBox" onclick="selectTextBox(4); enableEdit();"><img src="images/editPencil.png" alt="editPencil" style="width: 70%;"></button> -->
+							<button class="deleteTextBox" onclick="deleteTextBox(1,2);">&#9747;</button>
+						</div>
+					</div>
 
-				<!-- textbox2 -->
-				<input type="text" name="text2" placeholder="Job Title" onfocus="selectTextBox(2);" oninput="updateTextBox();">
-				<div class="TextBoxButtons">
-					<button class="editTextBox" onclick="selectTextBox(2); enableEdit();"><img src="images/editPencil.png" alt="editPencil" style="width: 70%;"></button>
-					<button class="deleteTextBox">&#9747;</button>
 				</div>
-				<div class="editTextBoxOptions" id="editSection2">
-					<hr class="style6">
-					Font:
-					<select class="fontFamily">
-					  <option value="volvo">Volvo</option>
-					  <option value="saab">Saab</option>
-					  <option value="mercedes">Mercedes</option>
-					  <option value="audi">Audi</option>
-					</select>
-					<div class="fontColor" id="fontColorSample2">
-						<div class="dropdownArrow" onclick="fixedPickColorSection();">
-							<img src="images/dropdownArrow.png" alt="dropdownArrow"/>
-						</div>
-						<button class="fontColorPicker" onclick="pickColor(1);">
-							<img src="images/colorCircle.png" alt="colorCircle" style="width: 80%;">
-						</button>
-					</div>
-					<br>
-					<div class="BIU">
-						<button class="bold" id="bold2" onclick="BoldButton()"><img src="images/bold.png" alt="bold" style="width:30%;" /></button>
-						<button class="italic" id="italic2" onclick="ItalicButton()"><img src="images/italic.png" alt="bold" style="width:30%;" /></button>
-						<button class="underline" id="underline2" onclick="UnderlineButton()"><img src="images/underline.png" alt="bold" style="width:30%;"/></button>
-					</div>
-					<span class="fontSizeSuffix"><input type="number" name="BusinessFont2" value="1.5" min="1" max="16" oninput="editFontSize()" />pt</span>
-					<hr class="style6">
-					Alignment:
-					<div class="alignment">
-						<button class="left_align" id="left_align2" onclick="leftAlignButton()"><img src="images/align_left.png" alt="bold" style="width:40%;" /></button>
-						<button class="center_align selected" id="center_align2" onclick="centerAlignButton()"><img src="images/align_center.png" alt="bold" style="width:40%;" /></button>
-						<button class="right_align" id="right_align2" onclick="rightAlignButton()"><img src="images/align_right.png" alt="bold" style="width:40%;"/></button>
-					</div>
-					<hr class="style6">
-				</div>
-				<!-- textbox3 -->
-				<input type="text" name="text3" placeholder="Company Name" onfocus="selectTextBox(3);" oninput="updateTextBox();">
-				<div class="TextBoxButtons">
-					<button class="editTextBox" onclick="selectTextBox(3); enableEdit();"><img src="images/editPencil.png" alt="editPencil" style="width: 70%;"></button>
-					<button class="deleteTextBox">&#9747;</button>
-				</div>
-				<div class="editTextBoxOptions" id="editSection3">
-					<hr class="style6">
-					Font:
-					<select class="fontFamily">
-					  <option value="song">宋体</option>
-					  <option value="saab">楷体</option>
-					  <option value="mercedes">黑体</option>
-					  <option value="audi">行体</option>
-					  <option value="audi">圆体</option>
-					  <option value="audi">隶书</option>
-					  <option value="audi">琥珀体</option>
-					  <option value="audi">彩云体</option>
-					</select>
-					<div class="fontColor" id="fontColorSample3">
-						<div class="dropdownArrow" onclick="fixedPickColorSection();">
-							<img src="images/dropdownArrow.png" alt="dropdownArrow"/>
-						</div>
-						<button class="fontColorPicker" onclick="pickColor(1);">
-							<img src="images/colorCircle.png" alt="colorCircle" style="width: 80%;">
-						</button>
-					</div>
-					<br>
-					<div class="BIU">
-						<button class="bold" id="bold3" onclick="BoldButton()"><img src="images/bold.png" alt="bold" style="width:30%;" /></button>
-						<button class="italic" id="italic3" onclick="ItalicButton()"><img src="images/italic.png" alt="bold" style="width:30%;" /></button>
-						<button class="underline" id="underline3" onclick="UnderlineButton()"><img src="images/underline.png" alt="bold" style="width:30%;"/></button>
-					</div>
-					<span class="fontSizeSuffix"><input type="number" name="BusinessFont3" value="1.5" min="1" max="16" oninput="editFontSize()" />pt</span>
-					<hr class="style6">
-					Alignment:
-					<div class="alignment">
-						<button class="left_align" id="left_align3" onclick="leftAlignButton()"><img src="images/align_left.png" alt="bold" style="width:40%;" /></button>
-						<button class="center_align selected" id="center_align3" onclick="centerAlignButton()"><img src="images/align_center.png" alt="bold" style="width:40%;" /></button>
-						<button class="right_align" id="right_align3" onclick="rightAlignButton()"><img src="images/align_right.png" alt="bold" style="width:40%;"/></button>
-					</div>
-					<hr class="style6">
-				</div>
-				<!-- textbox4 -->
-				<input type="text" name="text4" placeholder="Phone Number" onfocus="selectTextBox(4);" oninput="updateTextBox();">
-				<div class="TextBoxButtons">
-					<button class="editTextBox" onclick="selectTextBox(4); enableEdit();"><img src="images/editPencil.png" alt="editPencil" style="width: 70%;"></button>
-					<button class="deleteTextBox">&#9747;</button>
-				</div>
-				<div class="editTextBoxOptions" id="editSection4">
-					<hr class="style6">
-					Font:
-					<select class="fontFamily">
-					  <option value="volvo">Volvo</option>
-					  <option value="saab">Saab</option>
-					  <option value="mercedes">Mercedes</option>
-					  <option value="audi">Audi</option>
-					</select>
-					<div class="fontColor" id="fontColorSample4">
-						<div class="dropdownArrow" onclick="fixedPickColorSection();">
-							<img src="images/dropdownArrow.png" alt="dropdownArrow"/>
-						</div>
-						<button class="fontColorPicker" onclick="pickColor(1);">
-							<img src="images/colorCircle.png" alt="colorCircle" style="width: 80%;">
-						</button>
-					</div>
-					<br>
-					<div class="BIU">
-						<button class="bold" id="bold4" onclick="BoldButton()"><img src="images/bold.png" alt="bold" style="width:30%;" /></button>
-						<button class="italic" id="italic4" onclick="ItalicButton()"><img src="images/italic.png" alt="bold" style="width:30%;" /></button>
-						<button class="underline" id="underline4" onclick="UnderlineButton()"><img src="images/underline.png" alt="bold" style="width:30%;"/></button>
-					</div>
-					<span class="fontSizeSuffix"><input type="number" name="BusinessFont4" value="1.5" min="1" max="16" oninput="editFontSize()" />pt</span>
-					<hr class="style6">
-					Alignment:
-					<div class="alignment">
-						<button class="left_align" id="left_align4" onclick="leftAlignButton()"><img src="images/align_left.png" alt="bold" style="width:40%;" /></button>
-						<button class="center_align selected" id="center_align4" onclick="centerAlignButton()"><img src="images/align_center.png" alt="bold" style="width:40%;" /></button>
-						<button class="right_align" id="right_align4" onclick="rightAlignButton()"><img src="images/align_right.png" alt="bold" style="width:40%;"/></button>
-					</div>
-					<hr class="style6">
-				</div>
-				
 			</div>
 
 			<div id="tab2" class="designTabs">
@@ -263,7 +208,7 @@
 				<div id="bgColor">
 					背景<br>
 					<div id="colorSample">
-						<div class="fixedColorPicker4BG" onclick="pickColorSel = 2; fixedPickColorSection();">
+						<div class="fixedColorPicker4BG" onclick="pickColorSel = 2; fixedPickColorSection(2);">
 							<img src="images/dropdownArrow.png" alt="dropdownArrow"/>
 						</div>
 						
@@ -284,10 +229,10 @@
 						<img src="businessCardBG/img10.png" alt="img10" onclick="BGChosen(10);"/>
 					</div>
 					
-					<br><br>
+					<br>
 					上传背景图片：	
 								<!-- <form> -->
-	  								<input id="img1" type="file" name="pic" accept="image/*">
+	  								<input id="img1" type="file" name="pic" accept="image/*" onchange ="uploadImg();">
 	  								<!-- <div onclick="document.getElementById('businessCardBGImg').src = document.getElementById('img1').value;">submit</div> -->
 	  								<!-- <div >submit</div> -->
 	  								<!-- <input type="submit" value="使用图片" onclick="console.log(document.getElementById('img1').value);"> -->
@@ -295,6 +240,17 @@
 					
 				</div>
 				<hr class="style6">
+				<div id="logoSection">
+					LOGO
+						<input id="img1" type="file" name="pic" accept="image/*" onchange ="uploadImg();">
+				</div>
+				<hr class="style6">
+				<div id="QRCodeSection">
+					二维码
+						<input id="img1" type="file" name="pic" accept="image/*" onchange ="uploadImg();">
+				</div>
+				<hr class="style6">
+
 			</div>
 
 			<div id="tab3" class="designTabs">
@@ -331,33 +287,33 @@
 				<button style="background: #F6CECE;" onclick="fixedColorChosen('#F6CECE');"></button>
 				<button style="background: #F8E0F1;" onclick="fixedColorChosen('#F8E0F1');"></button>
 
-				<button style="background: #58D3F7;" onclick="fixedColorChosen(7);"></button>
-				<button style="background: #01DFA5;" onclick="fixedColorChosen(8);"></button>
-				<button style="background: #F3F781;" onclick="fixedColorChosen(9);"></button>
-				<button style="background: #F7BE81;" onclick="fixedColorChosen(10);"></button>
-				<button style="background: #F78181;" onclick="fixedColorChosen(11);"></button>
-				<button style="background: #F5A9F2;" onclick="fixedColorChosen(12);"></button>
+				<button style="background: #58D3F7;" onclick="fixedColorChosen('#58D3F7');"></button>
+				<button style="background: #01DFA5;" onclick="fixedColorChosen('#01DFA5');"></button>
+				<button style="background: #F3F781;" onclick="fixedColorChosen('#F3F781');"></button>
+				<button style="background: #F7BE81;" onclick="fixedColorChosen('#F7BE81');"></button>
+				<button style="background: #F78181;" onclick="fixedColorChosen('#F78181');"></button>
+				<button style="background: #F5A9F2;" onclick="fixedColorChosen('#F5A9F2');"></button>
 
-				<button style="background: blue;"	 onclick="fixedColorChosen(13);"></button>
-				<button style="background: green;"	 onclick="fixedColorChosen(14);"></button>
-				<button style="background: yellow;"	 onclick="fixedColorChosen(15);"></button>
-				<button style="background: orange;"	 onclick="fixedColorChosen(16);"></button>
-				<button style="background: red;"	 onclick="fixedColorChosen(17);"></button>
-				<button style="background: purple;"	 onclick="fixedColorChosen(18);"></button>
+				<button style="background: blue;"	 onclick="fixedColorChosen('#0000FF');"></button>
+				<button style="background: green;"	 onclick="fixedColorChosen('#00FF00');"></button>
+				<button style="background: yellow;"	 onclick="fixedColorChosen('#FFFF00');"></button>
+				<button style="background: orange;"	 onclick="fixedColorChosen('#FFA500');"></button>
+				<button style="background: red;"	 onclick="fixedColorChosen('#FF0000');"></button>
+				<button style="background: purple;"	 onclick="fixedColorChosen('#800080');"></button>
 
-				<button style="background: #084B8A;" onclick="fixedColorChosen(19);"></button>
-				<button style="background: #173B0B;" onclick="fixedColorChosen(20);"></button>
-				<button style="background: #5F4C0B;" onclick="fixedColorChosen(21);"></button>
-				<button style="background: #8A4B08;" onclick="fixedColorChosen(22);"></button>
-				<button style="background: #610B0B;" onclick="fixedColorChosen(23);"></button>
-				<button style="background: #610B5E;" onclick="fixedColorChosen(24);"></button>
+				<button style="background: #084B8A;" onclick="fixedColorChosen('#084B8A');"></button>
+				<button style="background: #173B0B;" onclick="fixedColorChosen('#173B0B');"></button>
+				<button style="background: #5F4C0B;" onclick="fixedColorChosen('#5F4C0B');"></button>
+				<button style="background: #8A4B08;" onclick="fixedColorChosen('#8A4B08');"></button>
+				<button style="background: #610B0B;" onclick="fixedColorChosen('#610B0B');"></button>
+				<button style="background: #610B5E;" onclick="fixedColorChosen('#610B5E');"></button>
 
-				<button style="background: #FFFFFF; border:1px solid lightgray;"	 onclick="fixedColorChosen(25);"></button>
-				<button style="background: #E6E6E6; border:1px solid lightgray;"	 onclick="fixedColorChosen(26);"></button>
-				<button style="background: #BDBDBD;" onclick="fixedColorChosen(27);"></button>
-				<button style="background: #848484;" onclick="fixedColorChosen(28);"></button>
-				<button style="background: #424242;" onclick="fixedColorChosen(29;"></button>
-				<button style="background: #000000;" onclick="fixedColorChosen(30);"></button>
+				<button style="background: #FFFFFF; border:1px solid lightgray;" onclick="fixedColorChosen('#FFFFFF');"></button>
+				<button style="background: #E6E6E6; border:1px solid lightgray;" onclick="fixedColorChosen('#E6E6E6');"></button>
+				<button style="background: #BDBDBD;" onclick="fixedColorChosen('#BDBDBD');"></button>
+				<button style="background: #848484;" onclick="fixedColorChosen('#848484');"></button>
+				<button style="background: #424242;" onclick="fixedColorChosen('#424242';"></button>
+				<button style="background: #000000;" onclick="fixedColorChosen('#000000');"></button>
 			</div>
 			<div id="backgroundColorPicker" class="colorpicker">
 				<div class="closeButton"><img src="images/close.png" onclick="closeColorPicker();"></div>
@@ -403,8 +359,12 @@
           console.log(hsv.h, hsv.s, hsv.v);         // [0-359], [0-1], [0-1]
           console.log(rgb.r, rgb.g, rgb.b);         // [0-255], [0-255], [0-255]
           if(pickColorSel == 1){
-          	document.getElementById("workZoneTextBox" + selectedWorkZoneTextBoxID.toString()).style.color = hex;
-          	document.getElementById("fontColorSample" + selectedWorkZoneTextBoxID.toString()).style.backgroundColor = hex;
+          	if(document.getElementById("backSide").style.display == "none"){
+          		document.getElementById("workZoneTextBox" + selectedWorkZoneTextBoxID.toString()).style.color = hex;
+          	}else{
+          		document.getElementById("workZoneTextBackBox" + selectedBackTextBoxID.toString()).style.color = hex;
+          	}
+          	document.getElementById("fontColorSample").style.backgroundColor = hex;
 
           }else if(pickColorSel == 2){
           	document.getElementById("colorSample").style.backgroundColor = hex;

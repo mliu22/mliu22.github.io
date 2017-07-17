@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)file:///Users/MengyaoLiu/Desktop/CustomCardDesign/shop_businessCard.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Premier League Football Predictor</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" type="text/css" href="./Premier League Football Predictor_files/container.css">
+    <link rel="stylesheet" type="text/css" href="./Premier League Football Predictor_files/themes.css">
+    <script type="text/javascript" src="./Premier League Football Predictor_files/colorpicker.js"></script>
+    <script type="text/javascript" src="./Premier League Football Predictor_files/shop_businessCard.js"></script>
+
+</head>
+
+<body onload="main();">
+	<nav>
+		<div id="site-Title">
+			Design Your Card
+		</div>
+		<div id="nav-link">
+			<a href="file:///Users/MengyaoLiu/Desktop/CustomCardDesign/index.html">主页</a> 
+			<a href="file:///Users/MengyaoLiu/Desktop/CustomCardDesign/shop.html">商铺</a> 
+			<a href="file:///Users/MengyaoLiu/Desktop/CustomCardDesign/shop_businessCard.html#">About Us</a> 
+			<a href="file:///Users/MengyaoLiu/Desktop/CustomCardDesign/shop_businessCard.html#">Contact Us</a>
+			<img src="./Premier League Football Predictor_files/shoppingbag.png" alt="Smiley face"><span id="bagAmount">0</span>
+		</div>
+	</nav>
+
+	<div class="content-container design-page">
+		<h2>设计你的商业名片</h2>
+		<button onclick="convertIMG();">convertIMG</button>
+		<br>
+		<div class="design-window">
+			<div class="workZone" onclick="deselectTextBox();" id="frontSide">
+				<div id="textBoxes">
+					<div class="businessCardTextBox" id="workZoneTextBox1" style="top: 55px; left: 90px; text-transform: uppercase; font-size: 100px; position: absolute;" onclick="selectTextBox(1);">Name</div>
+					<div class="businessCardTextBox" id="workZoneTextBox2" style="top:180px; left:90px; text-transform: uppercase; font-size: 15px;" onclick="selectTextBox(2);">Job Title</div>
+					<div class="businessCardTextBox" id="workZoneTextBox3" style="top:220px; left:90px; text-transform: uppercase; font-size: 15px;" onclick="selectTextBox(3);">Company Name</div>
+					<div class="businessCardTextBox" id="workZoneTextBox4" style="top:250px; left:90px; text-transform: uppercase; font-size: 15px;" onclick="selectTextBox(4);">Phone Number</div>
+				</div>
+				
+				<img class="BG" src="./Premier League Football Predictor_files/img1.png" id="businessCardBGImg" usemap="#businessCardWorkWindow">
+				
+				<!-- <hr class="verticalDivider"> -->
+				<div class="vertical-line" id="verticalDivider"></div>
+				<div class="horizontal-line" id="horizontalDivider"></div>
+				<div class="plainColor" id="plainColorID"></div>
+				<div class="saveBorder"></div>
+				<map name="businessCardWorkWindow">
+				  <area shape="rect" coords="0,110,82,200" alt="text1" onclick="console.log(&#39;haha&#39;);">
+
+				</map>
+			</div>
+
+			<div class="workZone" id="backSide" style="display: none;">
+				<img class="logo" src="./Premier League Football Predictor_files/logo.png" style="top:60px;">
+				<img class="BG" src="./Premier League Football Predictor_files/img1.png" id="businessCardBGImg" usemap="#businessCardWorkWindow">
+				
+				<!-- <hr class="verticalDivider"> -->
+				<div class="vertical-line" id="verticalDivider"></div>
+				<div class="horizontal-line" id="horizontalDivider"></div>
+				<div class="plainColor" id="plainColorID" style="display: block; background: #F2F2F2;"></div>
+				<div class="saveBorder"></div>
+			</div>
+			
+			<div class="chooseSide">
+				<div class="Side" onclick="businessCardFrontSide();">
+					<img src="./Premier League Football Predictor_files/bgimg2.png" style="width:100%;">
+					<div id="frontSideButton" class="middle">正面</div>
+				</div>
+				
+				<div class="Side" onclick="businessCardBackSide();">
+					<img src="./Premier League Football Predictor_files/bgimg2.png" style="width:100%;">
+					<div id="backSideButton" class="middle">反面</div>
+				</div>
+				
+			</div>
+			<div class="template-carousel">
+				模版<br>
+				<div class="templates">
+					<img src="./Premier League Football Predictor_files/bgimg2.png">
+					<img src="./Premier League Football Predictor_files/bgimg2.png">
+					<img src="./Premier League Football Predictor_files/bgimg2.png">
+					<img src="./Premier League Football Predictor_files/bgimg2.png">
+					<img src="./Premier League Football Predictor_files/bgimg2.png">
+					<img src="./Premier League Football Predictor_files/bgimg2.png">
+					<img src="./Premier League Football Predictor_files/bgimg2.png">
+					<img src="./Premier League Football Predictor_files/bgimg2.png">
+					
+					<img src="./Premier League Football Predictor_files/bgimg2.png">
+				</div>
+		
+			</div>
+		</div>
+
+		<div id="TexBoxEditor">
+			<!-- <hr class="style6"> -->
+						<!-- Font: -->
+			<select class="fontFamily">
+				<option value="volvo">Volvo</option>
+				<option value="saab">Saab</option>
+				<option value="mercedes">Mercedes</option>
+				<option value="audi">Audi</option>
+			</select>
+			<div class="fontColor" id="fontColorSample1">
+				<div class="dropdownArrow" onclick="fixedPickColorSection();">
+					<img src="./Premier League Football Predictor_files/dropdownArrow.png" alt="dropdownArrow">
+				</div>
+							
+				<button class="fontColorPicker" onclick="pickColor(1);">
+					<img src="./Premier League Football Predictor_files/colorCircle.png" alt="colorCircle" style="width: 80%;">
+				</button>
+			</div>
+
+			<div class="BIU">
+				<button class="bold" id="bold1" onclick="BoldButton()"><img src="./Premier League Football Predictor_files/bold.png" alt="bold" style="width:30%;"></button>
+				<button class="italic" id="italic1" onclick="ItalicButton()"><img src="./Premier League Football Predictor_files/italic.png" alt="bold" style="width:30%;"></button>
+				<button class="underline" id="underline1" onclick="UnderlineButton()"><img src="./Premier League Football Predictor_files/underline.png" alt="bold" style="width:30%;"></button>
+			</div>
+			<span class="fontSizeSuffix"><input type="number" name="BusinessFont1" value="10" min="1" max="16" oninput="editFontSize()">pt</span>
+						
+			<hr class="style6">
+			Alignment:
+			<div class="alignment">
+				<button class="left_align" id="left_align1" onclick="leftAlignButton()"><img src="./Premier League Football Predictor_files/align_left.png" alt="bold" style="width:40%;"></button>
+				<button class="center_align selected" id="center_align1" onclick="centerAlignButton()"><img src="./Premier League Football Predictor_files/align_center.png" alt="bold" style="width:40%;"></button>
+				<button class="right_align" id="right_align1" onclick="rightAlignButton()"><img src="./Premier League Football Predictor_files/align_right.png" alt="bold" style="width:40%;"></button>
+			</div>
+			<hr class="style6">
+
+		</div>
+		<div class="design-option">
+			<nav class="design_nav_bar">
+				<ul>
+					<li class="selected" id="li1" onclick="tabChosen(&#39;tab1&#39;,[&#39;tab2&#39;,&#39;tab3&#39;], &#39;li1&#39;, [&#39;li2&#39;, &#39;li3&#39;])">文字</li>
+					<li id="li2" onclick="tabChosen(&#39;tab2&#39;,[&#39;tab1&#39;,&#39;tab3&#39;], &#39;li2&#39;, [&#39;li1&#39;, &#39;li3&#39;])">图片</li>
+					<li id="li3" onclick="tabChosen(&#39;tab3&#39;,[&#39;tab1&#39;,&#39;tab2&#39;], &#39;li3&#39;, [&#39;li1&#39;, &#39;li2&#39;])">更多</li>
+				</ul>
+			</nav>
+
+			<div id="tab1" class="designTabs" style="display: block;">
+				<div id="FrontSideEditor">
+					<button onclick="addTextField(1);">New Text Box</button>
+					<!-- textbox1 -->
+					<input type="text" name="text1" placeholder="Name" onfocus="selectTextBox(1);" oninput="updateTextBox();">
+					<div class="TextBoxButtons">
+						<button class="editTextBox" onclick="selectTextBox(1); enableEdit();"><img src="./Premier League Football Predictor_files/editPencil.png" alt="editPencil" style="width: 70%;"></button>
+						<button class="deleteTextBox">☓</button>
+					</div>
+					<div class="editTextBoxOptions" id="editSection1" style="display: block;">
+						
+						<br>
+						
+						
+					</div>
+
+					<!-- textbox2 -->
+					<input type="text" name="text2" placeholder="Job Title" onfocus="selectTextBox(2);" oninput="updateTextBox();">
+					<div class="TextBoxButtons">
+						<button class="editTextBox" onclick="selectTextBox(2); enableEdit();"><img src="./Premier League Football Predictor_files/editPencil.png" alt="editPencil" style="width: 70%;"></button>
+						<button class="deleteTextBox">☓</button>
+					</div>
+					<div class="editTextBoxOptions" id="editSection2">
+						<hr class="style6">
+						Font:
+						<select class="fontFamily">
+						  <option value="volvo">Volvo</option>
+						  <option value="saab">Saab</option>
+						  <option value="mercedes">Mercedes</option>
+						  <option value="audi">Audi</option>
+						</select>
+						<div class="fontColor" id="fontColorSample2">
+							<div class="dropdownArrow" onclick="fixedPickColorSection();">
+								<img src="./Premier League Football Predictor_files/dropdownArrow.png" alt="dropdownArrow">
+							</div>
+							<button class="fontColorPicker" onclick="pickColor(1);">
+								<img src="./Premier League Football Predictor_files/colorCircle.png" alt="colorCircle" style="width: 80%;">
+							</button>
+						</div>
+						<br>
+						<div class="BIU">
+							<button class="bold" id="bold2" onclick="BoldButton()"><img src="./Premier League Football Predictor_files/bold.png" alt="bold" style="width:30%;"></button>
+							<button class="italic" id="italic2" onclick="ItalicButton()"><img src="./Premier League Football Predictor_files/italic.png" alt="bold" style="width:30%;"></button>
+							<button class="underline" id="underline2" onclick="UnderlineButton()"><img src="./Premier League Football Predictor_files/underline.png" alt="bold" style="width:30%;"></button>
+						</div>
+						<span class="fontSizeSuffix"><input type="number" name="BusinessFont2" value="1.5" min="1" max="16" oninput="editFontSize()">pt</span>
+						<hr class="style6">
+						Alignment:
+						<div class="alignment">
+							<button class="left_align" id="left_align2" onclick="leftAlignButton()"><img src="./Premier League Football Predictor_files/align_left.png" alt="bold" style="width:40%;"></button>
+							<button class="center_align selected" id="center_align2" onclick="centerAlignButton()"><img src="./Premier League Football Predictor_files/align_center.png" alt="bold" style="width:40%;"></button>
+							<button class="right_align" id="right_align2" onclick="rightAlignButton()"><img src="./Premier League Football Predictor_files/align_right.png" alt="bold" style="width:40%;"></button>
+						</div>
+						<hr class="style6">
+					</div>
+					<!-- textbox3 -->
+					<input type="text" name="text3" placeholder="Company Name" onfocus="selectTextBox(3);" oninput="updateTextBox();">
+					<div class="TextBoxButtons">
+						<button class="editTextBox" onclick="selectTextBox(3); enableEdit();"><img src="./Premier League Football Predictor_files/editPencil.png" alt="editPencil" style="width: 70%;"></button>
+						<button class="deleteTextBox">☓</button>
+					</div>
+					<div class="editTextBoxOptions" id="editSection3">
+						<hr class="style6">
+						Font:
+						<select class="fontFamily">
+						  <option value="song">宋体</option>
+						  <option value="saab">楷体</option>
+						  <option value="mercedes">黑体</option>
+						  <option value="audi">行体</option>
+						  <option value="audi">圆体</option>
+						  <option value="audi">隶书</option>
+						  <option value="audi">琥珀体</option>
+						  <option value="audi">彩云体</option>
+						</select>
+						<div class="fontColor" id="fontColorSample3">
+							<div class="dropdownArrow" onclick="fixedPickColorSection();">
+								<img src="./Premier League Football Predictor_files/dropdownArrow.png" alt="dropdownArrow">
+							</div>
+							<button class="fontColorPicker" onclick="pickColor(1);">
+								<img src="./Premier League Football Predictor_files/colorCircle.png" alt="colorCircle" style="width: 80%;">
+							</button>
+						</div>
+						<br>
+						<div class="BIU">
+							<button class="bold" id="bold3" onclick="BoldButton()"><img src="./Premier League Football Predictor_files/bold.png" alt="bold" style="width:30%;"></button>
+							<button class="italic" id="italic3" onclick="ItalicButton()"><img src="./Premier League Football Predictor_files/italic.png" alt="bold" style="width:30%;"></button>
+							<button class="underline" id="underline3" onclick="UnderlineButton()"><img src="./Premier League Football Predictor_files/underline.png" alt="bold" style="width:30%;"></button>
+						</div>
+						<span class="fontSizeSuffix"><input type="number" name="BusinessFont3" value="1.5" min="1" max="16" oninput="editFontSize()">pt</span>
+						<hr class="style6">
+						Alignment:
+						<div class="alignment">
+							<button class="left_align" id="left_align3" onclick="leftAlignButton()"><img src="./Premier League Football Predictor_files/align_left.png" alt="bold" style="width:40%;"></button>
+							<button class="center_align selected" id="center_align3" onclick="centerAlignButton()"><img src="./Premier League Football Predictor_files/align_center.png" alt="bold" style="width:40%;"></button>
+							<button class="right_align" id="right_align3" onclick="rightAlignButton()"><img src="./Premier League Football Predictor_files/align_right.png" alt="bold" style="width:40%;"></button>
+						</div>
+						<hr class="style6">
+					</div>
+					<!-- textbox4 -->
+					<input type="text" name="text4" placeholder="Phone Number" onfocus="selectTextBox(4);" oninput="updateTextBox();">
+					<div class="TextBoxButtons">
+						<button class="editTextBox" onclick="selectTextBox(4); enableEdit();"><img src="./Premier League Football Predictor_files/editPencil.png" alt="editPencil" style="width: 70%;"></button>
+						<button class="deleteTextBox">☓</button>
+					</div>
+					<div class="editTextBoxOptions" id="editSection4">
+						<hr class="style6">
+						Font:
+						<select class="fontFamily">
+						  <option value="volvo">Volvo</option>
+						  <option value="saab">Saab</option>
+						  <option value="mercedes">Mercedes</option>
+						  <option value="audi">Audi</option>
+						</select>
+						<div class="fontColor" id="fontColorSample4">
+							<div class="dropdownArrow" onclick="fixedPickColorSection();">
+								<img src="./Premier League Football Predictor_files/dropdownArrow.png" alt="dropdownArrow">
+							</div>
+							<button class="fontColorPicker" onclick="pickColor(1);">
+								<img src="./Premier League Football Predictor_files/colorCircle.png" alt="colorCircle" style="width: 80%;">
+							</button>
+						</div>
+						<br>
+						<div class="BIU">
+							<button class="bold" id="bold4" onclick="BoldButton()"><img src="./Premier League Football Predictor_files/bold.png" alt="bold" style="width:30%;"></button>
+							<button class="italic" id="italic4" onclick="ItalicButton()"><img src="./Premier League Football Predictor_files/italic.png" alt="bold" style="width:30%;"></button>
+							<button class="underline" id="underline4" onclick="UnderlineButton()"><img src="./Premier League Football Predictor_files/underline.png" alt="bold" style="width:30%;"></button>
+						</div>
+						<span class="fontSizeSuffix"><input type="number" name="BusinessFont4" value="1.5" min="1" max="16" oninput="editFontSize()">pt</span>
+						<hr class="style6">
+						Alignment:
+						<div class="alignment">
+							<button class="left_align" id="left_align4" onclick="leftAlignButton()"><img src="./Premier League Football Predictor_files/align_left.png" alt="bold" style="width:40%;"></button>
+							<button class="center_align selected" id="center_align4" onclick="centerAlignButton()"><img src="./Premier League Football Predictor_files/align_center.png" alt="bold" style="width:40%;"></button>
+							<button class="right_align" id="right_align4" onclick="rightAlignButton()"><img src="./Premier League Football Predictor_files/align_right.png" alt="bold" style="width:40%;"></button>
+						</div>
+						<hr class="style6">
+					</div>
+				</div>
+				<div id="backSideEditor">
+					<button onclick="addTextField(2);">New Text Box</button>
+				</div>
+			</div>
+
+			<div id="tab2" class="designTabs">
+				<hr class="style6">
+				<div id="bgColor">
+					背景<br>
+					<div id="colorSample">
+						<div class="fixedColorPicker4BG" onclick="pickColorSel = 2; fixedPickColorSection();">
+							<img src="./Premier League Football Predictor_files/dropdownArrow.png" alt="dropdownArrow">
+						</div>
+						
+						<button onclick="pickColor(2);">
+							<img src="./Premier League Football Predictor_files/colorCircle.png" alt="colorCircle" style="width: 80%;">
+						</button>
+					</div>
+					<div id="bgImgChoice">
+						<img src="./Premier League Football Predictor_files/img1.png" alt="img1" onclick="BGChosen(1);">
+						<img src="./Premier League Football Predictor_files/img2.png" alt="img2" onclick="BGChosen(2);">
+						<img src="./Premier League Football Predictor_files/img3.png" alt="img3" onclick="BGChosen(3);">
+						<img src="./Premier League Football Predictor_files/img4.png" alt="img4" onclick="BGChosen(4);">
+						<img src="./Premier League Football Predictor_files/img5.png" alt="img5" onclick="BGChosen(5);">
+						<img src="./Premier League Football Predictor_files/img6.png" alt="img6" onclick="BGChosen(6);">
+						<img src="./Premier League Football Predictor_files/img7.png" alt="img7" onclick="BGChosen(7);">
+						<img src="./Premier League Football Predictor_files/img8.png" alt="img8" onclick="BGChosen(8);">
+						<img src="./Premier League Football Predictor_files/img9.png" alt="img9" onclick="BGChosen(9);">
+						<img src="./Premier League Football Predictor_files/img10.png" alt="img10" onclick="BGChosen(10);">
+					</div>
+					
+					<br>
+					上传背景图片：	
+								<!-- <form> -->
+	  								<input id="img1" type="file" name="pic" accept="image/*" onchange="uploadImg();">
+	  								<!-- <div onclick="document.getElementById('businessCardBGImg').src = document.getElementById('img1').value;">submit</div> -->
+	  								<!-- <div >submit</div> -->
+	  								<!-- <input type="submit" value="使用图片" onclick="console.log(document.getElementById('img1').value);"> -->
+								<!-- </form> -->
+					
+				</div>
+				<hr class="style6">
+				<div id="logoSection">
+					LOGO
+						<input id="img1" type="file" name="pic" accept="image/*" onchange="uploadImg();">
+				</div>
+				<hr class="style6">
+				<div id="QRCodeSection">
+					二维码
+						<input id="img1" type="file" name="pic" accept="image/*" onchange="uploadImg();">
+				</div>
+				<hr class="style6">
+
+			</div>
+
+			<div id="tab3" class="designTabs">
+				<hr class="style6">
+				<div id="size">
+					尺寸<br>
+					<img src="./Premier League Football Predictor_files/businesscarddimension.png" style="width:25%;">
+					<img src="./Premier League Football Predictor_files/businesscarddimension.png" style="width:25%; transform:rotate(-90deg);">	
+				</div>
+				
+				<hr class="style6">
+				<div class="frame">
+					边框
+				</div>
+				<hr class="style6">
+				<div id="material">
+					材质
+				</div>
+				<hr class="style6">
+				<div id="logo">
+					logo
+				</div>
+				<hr class="style6">
+				<div id="QRCode">
+					二维码
+				</div>
+				<hr class="style6">
+			</div>
+			<div class="fixedColorPicker" id="fixedColorPickerID">
+				<button style="background: #A9E2F3;" onclick="fixedColorChosen(&#39;#A9E2F3&#39;);"></button>
+				<button style="background: #E0F8E0;" onclick="fixedColorChosen(&#39;#E0F8E0&#39;);"></button>
+				<button style="background: #F5F6CE;" onclick="fixedColorChosen(&#39;#F5F6CE&#39;);"></button>
+				<button style="background: #F6E3CE;" onclick="fixedColorChosen(&#39;#F6E3CE&#39;);"></button>
+				<button style="background: #F6CECE;" onclick="fixedColorChosen(&#39;#F6CECE&#39;);"></button>
+				<button style="background: #F8E0F1;" onclick="fixedColorChosen(&#39;#F8E0F1&#39;);"></button>
+
+				<button style="background: #58D3F7;" onclick="fixedColorChosen(7);"></button>
+				<button style="background: #01DFA5;" onclick="fixedColorChosen(8);"></button>
+				<button style="background: #F3F781;" onclick="fixedColorChosen(9);"></button>
+				<button style="background: #F7BE81;" onclick="fixedColorChosen(10);"></button>
+				<button style="background: #F78181;" onclick="fixedColorChosen(11);"></button>
+				<button style="background: #F5A9F2;" onclick="fixedColorChosen(12);"></button>
+
+				<button style="background: blue;" onclick="fixedColorChosen(13);"></button>
+				<button style="background: green;" onclick="fixedColorChosen(14);"></button>
+				<button style="background: yellow;" onclick="fixedColorChosen(15);"></button>
+				<button style="background: orange;" onclick="fixedColorChosen(16);"></button>
+				<button style="background: red;" onclick="fixedColorChosen(17);"></button>
+				<button style="background: purple;" onclick="fixedColorChosen(18);"></button>
+
+				<button style="background: #084B8A;" onclick="fixedColorChosen(19);"></button>
+				<button style="background: #173B0B;" onclick="fixedColorChosen(20);"></button>
+				<button style="background: #5F4C0B;" onclick="fixedColorChosen(21);"></button>
+				<button style="background: #8A4B08;" onclick="fixedColorChosen(22);"></button>
+				<button style="background: #610B0B;" onclick="fixedColorChosen(23);"></button>
+				<button style="background: #610B5E;" onclick="fixedColorChosen(24);"></button>
+
+				<button style="background: #FFFFFF; border:1px solid lightgray;" onclick="fixedColorChosen(25);"></button>
+				<button style="background: #E6E6E6; border:1px solid lightgray;" onclick="fixedColorChosen(26);"></button>
+				<button style="background: #BDBDBD;" onclick="fixedColorChosen(27);"></button>
+				<button style="background: #848484;" onclick="fixedColorChosen(28);"></button>
+				<button style="background: #424242;" onclick="fixedColorChosen(29;"></button>
+				<button style="background: #000000;" onclick="fixedColorChosen(30);"></button>
+			</div>
+			<div id="backgroundColorPicker" class="colorpicker">
+				<div class="closeButton"><img src="./Premier League Football Predictor_files/close.png" onclick="closeColorPicker();"></div>
+				<div id="color-picker" class="cp-default"><div class="picker-wrapper"><div class="picker"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"><defs><lineargradient id="gradient-black-0" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#000000" stop-opacity="1"></stop><stop offset="100%" stop-color="#CC9A81" stop-opacity="0"></stop></lineargradient><lineargradient id="gradient-white-0" x1="0%" y1="100%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"></stop><stop offset="100%" stop-color="#CC9A81" stop-opacity="0"></stop></lineargradient></defs><rect x="0" y="0" width="100%" height="100%" fill="url(#gradient-white-0)"></rect><rect x="0" y="0" width="100%" height="100%" fill="url(#gradient-black-0)"></rect></svg></div><div class="picker-indicator" style="pointer-events: none;"></div></div><div class="slide-wrapper"><div class="slide"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"><defs><lineargradient id="gradient-hsv-0" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#FF0000" stop-opacity="1"></stop><stop offset="13%" stop-color="#FF00FF" stop-opacity="1"></stop><stop offset="25%" stop-color="#8000FF" stop-opacity="1"></stop><stop offset="38%" stop-color="#0040FF" stop-opacity="1"></stop><stop offset="50%" stop-color="#00FFFF" stop-opacity="1"></stop><stop offset="63%" stop-color="#00FF40" stop-opacity="1"></stop><stop offset="75%" stop-color="#0BED00" stop-opacity="1"></stop><stop offset="88%" stop-color="#FFFF00" stop-opacity="1"></stop><stop offset="100%" stop-color="#FF0000" stop-opacity="1"></stop></lineargradient></defs><rect x="0" y="0" width="100%" height="100%" fill="url(#gradient-hsv-0)"></rect></svg></div><div class="slide-indicator" style="pointer-events: none;"></div></div></div>
+			</div>
+			
+			
+		</div>
+
+		
+
+		
+	</div>
+
+	
+
+	<div class="subscribe">
+		Subscribe and stay on top of our latest news and promotions.
+		<form>
+			<input type="text" placeholder="电话号码" name="subscribe_number">
+			<input type="submit" value="订阅">
+		</form>
+		<img src="./Premier League Football Predictor_files/weixin.png" alt="weixin icon">
+		<img src="./Premier League Football Predictor_files/weibo.png" alt="weibo icon">
+		<img src="./Premier League Football Predictor_files/weibo.png" alt="weibo icon">
+	</div>
+
+	
+
+	<footer>
+	<img src="./Premier League Football Predictor_files/copyright.png" alt="copyright icon">
+	2017 by Design Your Card
+	</footer>
+
+
+	<script type="text/javascript">
+
+      ColorPicker(
+
+        document.getElementById('color-picker'),
+
+        function(hex, hsv, rgb) {
+          console.log(hsv.h, hsv.s, hsv.v);         // [0-359], [0-1], [0-1]
+          console.log(rgb.r, rgb.g, rgb.b);         // [0-255], [0-255], [0-255]
+          if(pickColorSel == 1){
+          	document.getElementById("workZoneTextBox" + selectedWorkZoneTextBoxID.toString()).style.color = hex;
+          	document.getElementById("fontColorSample" + selectedWorkZoneTextBoxID.toString()).style.backgroundColor = hex;
+
+          }else if(pickColorSel == 2){
+          	document.getElementById("colorSample").style.backgroundColor = hex;
+	        document.getElementById("plainColorID").style.backgroundColor = hex;
+	        document.getElementById("plainColorID").style.display = "block";
+          }
+          
+          // document.body.style.backgroundColor = hex;        // #HEX
+        });
+
+    </script>
+
+
+
+</body></html>

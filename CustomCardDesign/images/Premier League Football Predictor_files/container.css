@@ -370,44 +370,13 @@ nav li:hover{
     pointer-events: none;
 }
 
-.workZone .logo{
+.workZone img.logo{
 	z-index: 1000;
-	position: absolute;
-	width: 220px;
-	height: 120px;
-	/*border:1px solid gray;*/
-	box-sizing: border-box;
-	/*-khtml-user-select: none;
-    -o-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;*/
-    /*pointer-events: none;*/
-}
-
-.workZone .logo:hover{
-	border: 2px dashed gray;
-}
-
-.workZone .selected{
-	border: 1px dotted green;
-}
-
-.workZone img.logoImg{
-	width: 100%;
-	height: 100%;
-	/*z-index: 1000;
 	position: absolute;
 	width: 120px;
 	height: 120px;
 	border:1px solid gray;
-	box-sizing: border-box;*/
-	-khtml-user-select: none;
-    -o-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-    pointer-events: none;
+	box-sizing: border-box;
 }
 
 
@@ -476,188 +445,34 @@ nav li:hover{
 }
 
 .content-container #TexBoxEditor{
-	background: lightgray;
-	width: 740px;
-	height:55px;
+	background: white;
+	width: 900px;
+	height:100px;
 	position: absolute;
 	border: 1px solid gray;
 	box-sizing: border-box;
 	padding-left: 10px;
-	padding-top: 5px; 
-	border-radius: 10px;
-	display: none;
 }
 
 .content-container #TexBoxEditor select{
-	width:120px;
+	width:150px;
 	margin-left: 0px;
 }
 
 .content-container #TexBoxEditor input[type=number]{
 	height:16px;
-	width: 52px;
+	width: 62px;
 	font-size: 0.8em;
 	margin-right: 3px;
-	margin-top: -1px;
+	margin-top: -3px;
 	margin-left: -6px;
 	vertical-align: top;
-}
-
-.content-container #TexBoxEditor button{
-	outline: none;
-	border: none;
 }
 
 
 #TexBoxEditor .BIU .selected{
 	background: gray;
 }
-
-
-.content-container #TexBoxEditor .BIU{
-	vertical-align: top;
-	margin-top: 10px;
-	margin-right: 20px;
-	margin-left: 10px;
-	position: relative;
-	background: red;
-	width:170px;
-	height: 22px;
-	border-radius: 5px;
-	display: inline-block;
-}
-
-
-.content-container #TexBoxEditor .BIU .bold{
-	padding: 2px;
-	width:56.6px;
-	height: 100%;
-	border-radius: 0px;
-	border:0.01em  solid black;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-}
-
-.content-container #TexBoxEditor .BIU .italic{
-	padding: 2px;
-	border-radius: 0px;
-	margin-left: -4px;
-	width:56.6px;
-	height: 100%;
-	border: 0.05em solid black;
-}
-
-.content-container #TexBoxEditor .BIU .underline{
-	padding: 2px;
-	border-radius: 0px;
-	margin-left: -4px;
-	width:56.6px;
-	height: 100%;
-	border:0.05em  solid black;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
-
-.content-container #TexBoxEditor .alignment{
-	vertical-align: top;
-	/*margin-top: 8px;*/
-	/*margin-right: 10px;*/
-	position: relative;
-	background: red;
-	width:170px;
-	height: 22px;
-	border-radius: 5px;
-	display: inline-block;
-	vertical-align: top;
-	margin-left: 10px;
-	margin-top: 10px;
-
-}
-
-
-.content-container #TexBoxEditor .alignment .left_align{
-	padding: 0px;
-	width: 56.6px;
-	height: 100%;
-	border-radius: 0px;
-	border:1px solid black;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-}
-
-.content-container #TexBoxEditor .alignment .center_align{
-	padding: 0px;
-	border-radius: 0px;
-	margin-left: -4px;
-	width:56.6px;
-	height: 100%;
-	border:1px solid black;
-}
-
-.content-container #TexBoxEditor .alignment .right_align{
-	padding: 0px;
-	border-radius: 0px;
-	margin-left: -4px;
-	width:56.8px;
-	height: 100%;
-	border:1px solid black;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
-
-.content-container #TexBoxEditor .fontColor{
-	width:76px;
-	height:20px;
-	background:white;
-	border:1px solid gray;
-	border-radius: 5px;
-	display: inline-block;
-	margin-left: 10px;
-	margin-top: 10px;
-	vertical-align: top;
-	position: relative;
-}
-
-.content-container #TexBoxEditor .fontColor .fontColorPicker{
-	position: absolute;
-	width: 35%;
-	height: 22px;
-	left:50px;
-	top:-1px;
-	border-radius: 0px;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-	padding: 1px;
-}
-
-.content-container #TexBoxEditor .fontColor .dropdownArrow{
-	width: 65%;
-	height: 22px;
-	top: -1px;
-	left: 0px;
-	position: absolute;
-	/*display: none;*/
-	border-radius: 0px;
-	/*background: red;*/
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-}
-
-.content-container #TexBoxEditor .fontColor .dropdownArrow img{
-	width: 32%;
-	top: 3px;
-	left: 33px;
-	position: absolute;
-	display: none;
-	border-radius: 7px;
-	background: lightgray;
-}
-
-.content-container #TexBoxEditor .fontColor:hover .dropdownArrow img{
-	opacity: 1;
-	display: block;
-}
-
 
 .alignment .selected{
 	background: gray;
@@ -715,20 +530,20 @@ nav li:hover{
 	margin-top: -39px;
 }
 
-/*.content-container .design-option .designTabs button.editTextBox{
+.content-container .design-option .designTabs button.editTextBox{
 	width: 50%;
 	height:100%;
 	display: inline-block;
 	border: 1px solid gray;
 	border-radius: 0px;
-}*/
+}
 
 .content-container .design-option .designTabs button.deleteTextBox{
 	width: 50%;
 	height:100%;
 	display: inline-block;
 	border-radius: 0px;
-	margin-left: 40px;
+	margin-left: -5%;
 	border: 1px solid gray;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
@@ -780,6 +595,149 @@ select.fontFamily{
 
 .fontSizeSuffix{
 	display: inline-block;
+}
+
+.content-container #TexBoxEditor .BIU{
+	vertical-align: top;
+	margin-top: 8px;
+	margin-right: 20px;
+	margin-left: 58px;
+	position: relative;
+	background: red;
+	width:170px;
+	height: 22px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+
+.content-container #TexBoxEditor .BIU .bold{
+	padding: 2px;
+	width:56.6px;
+	height: 100%;
+	border-radius: 0px;
+	border:0.01em  solid black;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.content-container #TexBoxEditor .BIU .italic{
+	padding: 2px;
+	border-radius: 0px;
+	margin-left: -4px;
+	width:56.6px;
+	height: 100%;
+	border: 0.05em solid black;
+}
+
+.content-container #TexBoxEditor .BIU .underline{
+	padding: 2px;
+	border-radius: 0px;
+	margin-left: -4px;
+	width:56.6px;
+	height: 100%;
+	border:0.05em  solid black;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.content-container #TexBoxEditor .alignment{
+	vertical-align: top;
+	/*margin-top: 8px;*/
+	margin-right: 20px;
+	position: relative;
+	background: red;
+	width:170px;
+	height: 22px;
+	border-radius: 5px;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 20px;
+
+}
+
+
+.content-container #TexBoxEditor .alignment .left_align{
+	padding: 0px;
+	width: 56.6px;
+	height: 100%;
+	border-radius: 0px;
+	border:1px solid black;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.content-container #TexBoxEditor .alignment .center_align{
+	padding: 0px;
+	border-radius: 0px;
+	margin-left: -4px;
+	width:56.6px;
+	height: 100%;
+	border:1px solid black;
+}
+
+.content-container #TexBoxEditor .alignment .right_align{
+	padding: 0px;
+	border-radius: 0px;
+	margin-left: -4px;
+	width:56.6px;
+	height: 100%;
+	border:1px solid black;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.content-container #TexBoxEditor .fontColor{
+	width:76px;
+	height:20px;
+	background:white;
+	border:1px solid gray;
+	border-radius: 5px;
+	display: inline-block;
+	margin-left: 15px;
+	margin-top: 10px;
+	vertical-align: top;
+	position: relative;
+}
+
+.content-container #TexBoxEditor .fontColor .fontColorPicker{
+	position: absolute;
+	width: 35%;
+	height: 22px;
+	left:50px;
+	top:-1px;
+	border-radius: 0px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 1px;
+}
+
+.content-container #TexBoxEditor .fontColor .dropdownArrow{
+	width: 65%;
+	height: 22px;
+	top: -1px;
+	left: 0px;
+	position: absolute;
+	/*display: none;*/
+	border-radius: 0px;
+	/*background: red;*/
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.content-container #TexBoxEditor .fontColor .dropdownArrow img{
+	width: 32%;
+	top: 3px;
+	left: 33px;
+	position: absolute;
+	display: none;
+	border-radius: 7px;
+	background: lightgray;
+}
+
+.content-container #TexBoxEditor .fontColor:hover .dropdownArrow img{
+	opacity: 1;
+	display: block;
 }
 
 
@@ -1026,12 +984,9 @@ hr.style6 {
     height: 92%; /* Override in-line if you want specific height. */
     float: left; 
     position: absolute;
-    /*left:421px;*/
-    left:445px;
-    /*left:340px;*/
+    left:340px;
     top:5%;
     opacity: 0;
-    z-index: 40;
     /*display: none;*/
 }
 
@@ -1042,9 +997,8 @@ hr.style6 {
     float: left; 
     position: absolute;
     left:30px;
-    top:405px;
+    top:210px;
     opacity: 0;
-    z-index: 40;
     /*display: none;*/
 }
 
