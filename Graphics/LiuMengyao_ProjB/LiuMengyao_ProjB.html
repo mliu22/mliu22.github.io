@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>01_LineGrid Ray-Tracing</title>
+  </head>
+  <body onload="main()" onresize="browserResize()">
+    <canvas id="webgl" width="800" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <div>
+    <p>i key: move closer; k key: move further; j key: move left; l key: move right</p>
+    <p>up key: tilt up; down key: tilt down; left key: look left; right key: look right</p>
+
+    Anti-Aliasing: 
+    <button onclick="antiAliasing(1);">1x1 Jittered</button>
+    <button onclick="antiAliasing(2);">2x2 Jittered</button>
+    <button onclick="antiAliasing(4);">4x4 Jittered</button>
+    <button onclick="antiAliasing(6);">6x6 Jittered</button>
+    <button onclick="antiAliasing(10);">10x10 Jittered</button>
+    <br><br>
+    
+    <button onclick="Light1switch();">ON/OFF Light 1</button>
+    <button onclick="Light2switch();">ON/OFF Light 2</button>
+    <br>
+    <button onclick="decreaseDepth();">decrease</button>
+     Recursion Depth: <span id="Recursion_Depth">1</span>
+    <button onclick="increaseDepth();">increase</button>
+
+    <br>
+    <button onclick="VBO1toggle()">change view</button>
+    </div>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-quat.js"></script> 
+               <!-- JT modified to add quaternions -->
+    <script src="../lib/glMatrix.js"></script> 
+
+    <script src="lights-JT.js"></script>
+    <script src="materials_Ayerdi.js"></script>
+		<!-- SEE: http://glmatrix.net/ fast vector/matrix lib for webGL  -->
+    <script src="VBOboxes.js"></script>
+                <!-- JT library: each 'VBObox' unifies one VBO & its shader,uniforms,&attributes-->
+    <script src="Week01_LineGrid.js"></script>
+    <script src="Week01_traceSupplement.js"></script>
+
+    
+  </body>
+</html>
