@@ -10,8 +10,10 @@
     </canvas>
 
     <div>
+    <p>Left half is done by WebGL, right half is using Ray tracing.</p>
     <p>i key: move closer; k key: move further; j key: move left; l key: move right</p>
     <p>up key: tilt up; down key: tilt down; left key: look left; right key: look right</p>
+    <p>press t key to trace the image on the right. Tracing may take a while.....</p>
 
     Anti-Aliasing: 
     <button onclick="antiAliasing(1);">1x1 Jittered</button>
@@ -32,12 +34,12 @@
     <button onclick="VBO1toggle()">change view</button>
     </div>
 
-    <script src="../lib/webgl-utils.js"></script>
-    <script src="../lib/webgl-debug.js"></script>
-    <script src="../lib/cuon-utils.js"></script>
-    <script src="../lib/cuon-matrix-quat.js"></script> 
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-quat.js"></script> 
                <!-- JT modified to add quaternions -->
-    <script src="../lib/glMatrix.js"></script> 
+    <script src="lib/glMatrix.js"></script> 
 
     <script src="lights-JT.js"></script>
     <script src="materials_Ayerdi.js"></script>
